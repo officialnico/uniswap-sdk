@@ -11,14 +11,16 @@ export enum SUPPORTED_CHAIN_ID {
   Mainnet = 1,
   Ropsten = 3,
   Rinkeby = 4,
-  Kovan = 42
+  Kovan = 42,
+  xDai = 100
 }
 
 export const FACTORY_ADDRESS: { [key: number]: string } = {
   [SUPPORTED_CHAIN_ID.Mainnet]: '0xc0a47dFe034B400B47bDaD5FecDa2621de6c4d95',
   [SUPPORTED_CHAIN_ID.Ropsten]: '0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351',
   [SUPPORTED_CHAIN_ID.Rinkeby]: '0xf5D915570BC477f9B8D6C0E980aA81757A3AaC36',
-  [SUPPORTED_CHAIN_ID.Kovan]: '0xD3E51Ef092B2845f10401a0159B2B96e8B6c3D30'
+  [SUPPORTED_CHAIN_ID.Kovan]: '0xD3E51Ef092B2845f10401a0159B2B96e8B6c3D30',
+  [SUPPORTED_CHAIN_ID.xDai]: '0x70E969444603980c94f9fCF612F00767744F92E7'
 }
 
 export const FACTORY_ABI: string = JSON.stringify(FACTORY)
@@ -91,7 +93,8 @@ export const _CHAIN_ID_NAME: { [key: number]: string } = {
   [SUPPORTED_CHAIN_ID.Mainnet]: 'homestead',
   [SUPPORTED_CHAIN_ID.Ropsten]: 'ropsten',
   [SUPPORTED_CHAIN_ID.Rinkeby]: 'rinkeby',
-  [SUPPORTED_CHAIN_ID.Kovan]: 'kovan'
+  [SUPPORTED_CHAIN_ID.Kovan]: 'kovan',
+  [SUPPORTED_CHAIN_ID.xDai]: 'xdai'
 }
 
 export const _ERC20_ABI: string = JSON.stringify(ERC20)

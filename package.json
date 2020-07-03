@@ -1,6 +1,6 @@
 {
-  "name": "@uniswap/sdk",
-  "version": "1.0.0-beta.4",
+  "name": "@1hive/uniswap-sdk",
+  "version": "1.0.0",
   "description": "An SDK for building applications on top of the Uniswap exchange protocol.",
   "keywords": [
     "Uniswap",
@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "bignumber.js": "^9.0.0",
-    "ethers": "^4.0.28",
+    "ethers": "4.0.28",
     "lodash.clonedeepwith": "^4.5.0"
   }
 }

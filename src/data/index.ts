@@ -28,6 +28,7 @@ async function getChainIdAndProvider(chainIdOrProvider: ChainIdOrProvider): Prom
     const provider: ethers.providers.Provider = isLowLevelProvider(chainIdOrProvider)
       ? new ethers.providers.Web3Provider(chainIdOrProvider)
       : chainIdOrProvider
+
     const { chainId }: ethers.utils.Network = await provider.getNetwork()
 
     if (!(chainId in SUPPORTED_CHAIN_ID)) {
@@ -60,6 +61,7 @@ export async function getTokenReserves(
   tokenAddress: string,
   chainIdOrProvider: ChainIdOrProvider = 1
 ): Promise<TokenReservesNormalized> {
+
   // validate input arguments
   const normalizedTokenAddress: string = normalizeAddress(tokenAddress)
   const chainIdAndProvider: _ChainIdAndProvider = await getChainIdAndProvider(chainIdOrProvider)
@@ -74,6 +76,7 @@ export async function getTokenReserves(
     FACTORY_ABI,
     chainIdAndProvider.provider
   )
+
   const tokenContract: ethers.Contract = getContract(normalizedTokenAddress, _ERC20_ABI, chainIdAndProvider.provider)
 
   // fetch exchange adddress (blocking async)
