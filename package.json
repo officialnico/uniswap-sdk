@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "bignumber.js": "^9.0.0",
-    "ethers": "^4.0.28",
+    "ethers": "4.0.28",
     "lodash.clonedeepwith": "^4.5.0"
   }
 }
